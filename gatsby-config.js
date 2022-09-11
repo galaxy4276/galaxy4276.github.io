@@ -1,15 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Silveun.log`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Choi Eun Gi`,
+      summary: `개발 인생 기록`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `개발활동을 기록하고 회고하는 공간입니다.`,
+    siteUrl: `https://galaxy4276.github.io/`,
+    social: {},
   },
   plugins: [
     `gatsby-plugin-image`,
