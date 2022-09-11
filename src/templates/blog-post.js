@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { Disqus } from 'gatsby-plugin-disqus';
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -29,6 +30,13 @@ const BlogPostTemplate = ({
         <hr />
         <footer>
           <Bio />
+          <Disqus
+            config={{
+              url: location,
+              identifier: siteTitle,
+              title: post.frontmatter.title,
+            }}
+          />
         </footer>
       </article>
       <nav className="blog-post-nav">

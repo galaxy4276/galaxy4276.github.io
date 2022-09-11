@@ -9,8 +9,15 @@ module.exports = {
     siteUrl: `https://galaxy4276.github.io/`,
     social: {},
   },
+
   plugins: [
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `galaxy4276`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
