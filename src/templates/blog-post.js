@@ -32,9 +32,7 @@ const BlogPostTemplate = ({
           <Bio />
           <Disqus
             config={{
-              url: location,
               identifier: siteTitle,
-              title: post.frontmatter.title,
             }}
           />
         </footer>
