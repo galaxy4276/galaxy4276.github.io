@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[개발활동을 기록하고 회고하는 공간입니다.]]></description><link>https://galaxy4276.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 14 Sep 2022 04:08:15 GMT</lastBuildDate><item><title><![CDATA[10th Algorithm Study Memoirs]]></title><description><![CDATA[벌써 1…]]></description><link>https://galaxy4276.github.io/algorithm-study-memoir/10th_algorithm_study_memoir/</link><guid isPermaLink="false">https://galaxy4276.github.io/algorithm-study-memoir/10th_algorithm_study_memoir/</guid><pubDate>Wed, 14 Sep 2022 21:20:03 GMT</pubDate><content:encoded>&lt;p&gt;벌써 10번 째 알고리즘 스터디 회고록을 작성하게 되었습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[개발활동을 기록하고 회고하는 공간입니다.]]></description><link>https://galaxy4276.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 14 Sep 2022 04:13:25 GMT</lastBuildDate><item><title><![CDATA[10th Algorithm Study Memoirs]]></title><description><![CDATA[벌써 1…]]></description><link>https://galaxy4276.github.io/algorithm-study-memoir/10th_algorithm_study_memoir/</link><guid isPermaLink="false">https://galaxy4276.github.io/algorithm-study-memoir/10th_algorithm_study_memoir/</guid><pubDate>Wed, 14 Sep 2022 21:20:03 GMT</pubDate><content:encoded>&lt;p&gt;벌써 10번 째 알고리즘 스터디 회고록을 작성하게 되었습니다.&lt;/p&gt;
 &lt;p&gt;굳이 기념하자면 의미있는 횟수네요.&lt;/p&gt;
 &lt;p&gt;추석 연휴기간 동안 남들이 쉴 때, 네트워크 관제 주야 근무를 하면서 “누군가가 편히 쉴 수 있게 뒤에서 내가 지키고 있는 중”
 이라는 마음을 가지고 버텼습니다 ㅎㅎ..
@@ -8,7 +8,7 @@
 &lt;p&gt;근데 확장 플러그인이 생각보다 구조가 복잡해서 API 페이지 하나 열어두고 작업하는데 상당히 고역이었습니다. ( 제 역량부족을 다른 곳에 탓합니다.. )&lt;/p&gt;
 &lt;p&gt;결론적으로, 업무 중 하루의 적게는 2-3번, 많게는 열 댓번 해야하는 반복작업을 플러그인으로부터 자동수행하게 끔 처리하여 같이 근무하는 동료들이
 조금 덜 부담을 가지고 편하게 수행할 수 있게 되어 상당히 뿌듯했습니다.&lt;/p&gt;
-&lt;p&gt;제가 개발자를 하는 것은 나 또는 우리가 개발한 무언가로부터 누군가가 편리함과 좋은 경험을 느끼게 된다는게
+&lt;p&gt;제가 개발자를 하는 이유에 나 또는 우리가 개발한 무언가로부터 누군가가 편리함과 좋은 경험을 느끼게 된다는게
 큰 지분을 가지고 있는 것 같네요.&lt;/p&gt;
 &lt;p&gt;그럼 이어서 회고록 작성하겠습니다.&lt;/p&gt;
 &lt;h1&gt;125. Valid PalinDrome ( LeetCode )&lt;/h1&gt;
@@ -179,7 +179,7 @@
     left &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; where&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 떨어진곳에 바구니의 왼쪽이 도달하도록 설정&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;우측도 이와같은 원리로 해결하였습니다.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;Reference&lt;/h3&gt;
+&lt;h2&gt;Reference&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html&quot;&gt;Java Reference - Character&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://buzz-program.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%AC-BOJ2828%EC%82%AC%EA%B3%BC-%EB%8B%B4%EA%B8%B0-%EA%B2%8C%EC%9E%84&quot;&gt;[파이썬, 자바] BOJ_2828(사과 담기 게임) - 딱따구르리&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[9th Algorithm Study Memoirs]]></title><description><![CDATA[무작정 알고리즘 스터디를 시작한 지…]]></description><link>https://galaxy4276.github.io/algorithm-study-memoir/2022-09-11/</link><guid isPermaLink="false">https://galaxy4276.github.io/algorithm-study-memoir/2022-09-11/</guid><pubDate>Sun, 11 Sep 2022 21:20:03 GMT</pubDate><content:encoded>&lt;p&gt;무작정 알고리즘 스터디를 시작한 지 9주차가 되었습니다.&lt;/p&gt;
 &lt;p&gt;시작 이후로 인원이 한 두명씩 늘어나면서, 지치는 사람도 생길거고 진행도 더뎌질 줄 알았는데&lt;/p&gt;
