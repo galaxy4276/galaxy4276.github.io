@@ -96,7 +96,15 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */,
+    "paths": {
+      "@config/*": ["./config/*"],
+      "@components/*": ["./components/*"],
+      "@images/*": ["./images/*"],
+      "@layouts/*": ["./layouts/*"],
+      "@templates/*": ["./templates/*"],
+      "@pages/*": ["./pages/*"],
+    }
   },
   "include": ["./src/**/*", "./gatsby-node.ts", "./gatsby-config.ts", "./plugins/**/*"]
 }
