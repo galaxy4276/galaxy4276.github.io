@@ -1,3 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1, h2, h3, span, button, p {
+    @apply text-slate-700;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #FAFAFA;
+}
+
+.font-silk {
+  font-family: 'Silkscreen', cursive;
+}
+
+.pretendard {
+  font-family: Pretendard, cursive;
+}
+
+* {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.gradient-pinksea {
+  background-color: #FF9A8B;
+  background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+}
+
+.gradient-bluesea {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: local('../public/Pretendard-Medium.woff');
+}
+
+.header_nav {
+  @apply flex gap-x-2 md:gap-x-4 text-sm md:text-base text-white font-semibold tracking-wider;
+}
+
+.article_preview {
+  @apply w-[340px] md:w-full h-40 rounded-xl drop-shadow-md;
+}
+
+.post_layout {
+  @apply grid grid-cols-none md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-4 gap-y-5
+  justify-center md:justify-start;
+}
+
+.tag_layout {
+  @apply w-full h-fit flex gap-x-1.5 px-2 py-1.5 bg-slate-200 rounded-md;
+}
+
+.tag_button {
+  @apply py-px px-1.5 bg-white text-sm md:text-base rounded-md drop-shadow-sm;
+}
+
+.tag_button--pressed {
+  @apply bg-sky-500 text-white;
+}
+
+.post_layout {
+  @apply grid grid-cols-none md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-4 gap-y-5
+  justify-center md:justify-start;
+}
