@@ -41,9 +41,28 @@ a {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url('/fonts/JetBrainsMono-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url('/fonts/Pretendard-Medium.woff2') format('woff2');
+}
+
+
 .gradient-pinksea {
-  background-color: #FF9A8B;
-  background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+  background-color: #FBDA61;
+  background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+  /*background-color: #FF9A8B;*/
+  /*background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);*/
 }
 
 .gradient-bluesea {
