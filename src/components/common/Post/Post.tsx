@@ -1,4 +1,7 @@
 import React from 'react';
+import { navigate } from 'gatsby';
+import { nanoid } from 'nanoid';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import { PostTag } from './PostTag';
 
@@ -8,15 +11,24 @@ type Props = {
     description: string | null;
     tag: readonly (string | null)[] | null;
     date: string | null;
+    preview: string | null;
+    slug: string | null;
   }
 };
 
 export const Post: React.FC<Props> = ({ post }) => {
+  const onClickToRedirectArticle = () =>
+    navigate(`/contents/${post.slug}/`);
 
   return (
     <article
-      className="w-full"
+      className="w-full cursor-pointer rounded-lg transition hover:bg-slate-300
+        p-2 duration-300
+      "
+      onClick={onClickToRedirectArticle}
     >
+      <section>
+      </section>
       <section
         className="flex flex-col items-start"
       >
@@ -31,7 +43,12 @@ export const Post: React.FC<Props> = ({ post }) => {
         </span>
         {
           post.tag
-            ?.map(tagName => <PostTag tagName={tagName as string} />)
+            ?.map(tagName =>
+              <PostTag
+                key={nanoid()}
+                tagName={tagName as string}
+              />
+            )
         }
       </section>
     </article>

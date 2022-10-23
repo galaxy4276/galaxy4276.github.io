@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 export const Header: React.FC = () => {
   return (
@@ -10,13 +11,14 @@ export const Header: React.FC = () => {
           flex items-center h-full px-2 md:px-9 justify-between
         "
       >
-        <h1
+        <Link
           className="
             font-silk text-lg md:text-xl font-semibold text-white
           "
+          to="/"
         >
           SILVER.GI.LOG
-        </h1>
+        </Link>
         <ul className="header_nav">
           <li>About</li>
           <li>Posts</li>
