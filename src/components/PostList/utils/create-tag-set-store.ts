@@ -1,4 +1,4 @@
-function createTagSetStore(allMdx: Queries.Mdx[]): string[] {
+function createTagSetStore(allMdx: Queries.MarkdownRemark[]): string[] {
   const tagStore = new Set<string>();
   const tags = allMdx
     .map(({ frontmatter }) => frontmatter?.tag as string | undefined)

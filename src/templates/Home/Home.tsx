@@ -4,13 +4,13 @@ import { PageProps } from 'gatsby';
 import { PostList } from '../../components/PostList';
 
 type Props = {
-  allMdx: Queries.Mdx[];
+  mdList: Queries.MarkdownRemark[];
 }
 
-export const Home: React.FC<Props> = ({ allMdx }) => {
+export const Home: React.FC<Props> = ({ mdList }) => {
   return (
     <DefaultTemplate>
-      <PostList allMdx={allMdx} />
+      <PostList mdList={mdList} />
     </DefaultTemplate>
   );
 };

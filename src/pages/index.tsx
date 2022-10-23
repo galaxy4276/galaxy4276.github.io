@@ -4,35 +4,38 @@ import { graphql, PageProps } from 'gatsby';
 
 import { Home } from '../templates/Home';
 
-const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
-  const mdxList = data.allMdx.nodes;
+const IndexPage = ({ data }: PageProps<any>) => {
+  const mdList = data.allMarkdownRemark.nodes;
+  console.log(mdList);
   return (
-    <Home allMdx={mdxList as Queries.Mdx[]} />
+    <Home mdList={mdList as Queries.MarkdownRemark[]} />
   );
 };
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>SIVER.GI.LOG | HOME</title>
+export const Head: HeadFC = () => <title>SILVER.GI.LOG | HOME</title>
 
 export const query = graphql`
   query IndexPage {
-    site {
-      siteMetadata {
-        title
-        author
-        siteUrl
-      }
-    }
-    allMdx {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         frontmatter {
           title
           description
           tag
           date(formatString: "YYYY년 MM월 DD일")
+          preview
+#          preview {
+#            childImagesSharp {
+#              fluid(maxWidth: 700, maxHeight: 500) {
+#                ...GatsbyImageSharpFluid
+#              }
+#            }
+#          }
+          slug
         }
       }
-    } 
+    }
   }
 `;

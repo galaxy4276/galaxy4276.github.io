@@ -9,14 +9,14 @@ import { PostLayout } from '../../layouts';
 
 const TagStateContextProvider = TagStateContext.Provider;
 type Props = {
-  allMdx: Queries.Mdx[];
+  mdList: Queries.MarkdownRemark[];
 };
 
-export const PostList: React.FC<Props> = ({ allMdx }) => {
+export const PostList: React.FC<Props> = ({ mdList }) => {
   const [filterTagList, setFilterTagList] = useState<number[]>([]);
   console.log({ filterTagList });
 
-  const tagStore = useMemo(() => createTagSetStore(allMdx), []);
+  const tagStore = useMemo(() => createTagSetStore(mdList), []);
   const ctxProps = useMemo(() => ({
     tagList: tagStore,
     setTagState: setFilterTagList,
@@ -24,11 +24,12 @@ export const PostList: React.FC<Props> = ({ allMdx }) => {
 
   // TODO: Filter 로직 필요
   const posts = useMemo(() => {
-    return allMdx.map(({ frontmatter: { ...props }}) => ({ ...props }));
+    return mdList.map(({ frontmatter: { ...props }}) => ({ ...props }));
   }, [filterTagList]);
+  console.log(posts);
 
   return (
-    <section>
+    <section className="flex flex-col gap-y-5">
       <section>
         <TagStateContextProvider value={ctxProps}>
           <TagList />
