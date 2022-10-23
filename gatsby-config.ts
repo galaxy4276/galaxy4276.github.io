@@ -11,6 +11,7 @@ const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-plugin-postcss',
+    'gatsby-plugin-emotion',
     {
       resolve: 'gatsby-plugin-alias-imports',
       options: {
@@ -26,31 +27,30 @@ const config: GatsbyConfig = {
       },
     },
     'gatsby-plugin-mdx',
-    'gatsby-plugin-sharp',
+    'gatsby-plugin-image',
     'gatsby-transformer-sharp',
-    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'contents',
-        path: path.resolve(__dirname, 'contents'),
+        path: `${__dirname}/src/contents/`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: path.resolve(__dirname, 'src', 'images'),
+        path: `${__dirname}/src/pages`,
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/images`,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-page-creator`,
-    //   options: {
-    //     path: `${__dirname}/src/posts`,
-    //   },
-    // },
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
@@ -59,13 +59,6 @@ const config: GatsbyConfig = {
               maxWidth: 590,
             },
           },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -96,15 +89,26 @@ const config: GatsbyConfig = {
               escapeEntities: {},
             },
           },
+          {
+            resolve: 'gatsby-remark-classes',
+            options: {
+              classMap: {
+                'heading[depth=1]': 'text-2xl',
+                'heading[depth=2]': 'text-2xl',
+                'heading[depth=3]': 'text-2xl',
+              }
+            }
+          }
         ],
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        plugins: [`gatsby-remark-autolink-headers`],
-      },
-    },
+        fonts: [
+        ]
+      }
+    }
   ],
 };
 
