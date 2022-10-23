@@ -29,11 +29,12 @@ const config: GatsbyConfig = {
     'gatsby-plugin-mdx',
     'gatsby-plugin-image',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'contents',
-        path: `${__dirname}/src/contents/`,
+        path: `${__dirname}/src/contents`,
       },
     },
     {
@@ -48,11 +49,11 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-plugin-sharp',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          'gatsby-remark-static-images',
           {
             resolve: `gatsby-remark-images`,
             options: {

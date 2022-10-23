@@ -2,7 +2,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <link
       rel="preload"
-      href="./fonts/JetBrainsMono-Medium.woff2"
+      href="../../fonts/JetBrainsMono-Medium.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
@@ -10,7 +10,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
     />,
     <link
       rel="preload"
-      href="./fonts/Pretendard-Medium.woff2"
+      href="../../fonts/Pretendard-Medium.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
