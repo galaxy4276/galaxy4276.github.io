@@ -4,6 +4,8 @@ date: "2022-09-24T10:12:03.284Z"
 description: "11번째 알고리즘 스터디 회고록입니다."
 tag:
   - Algorithm
+preview: ../src/images/no-banner.jpg
+slug: 11th_algorithm_study_memoir
 ---
 
 11번 째 알고리즘 스터디 회고록입니다.

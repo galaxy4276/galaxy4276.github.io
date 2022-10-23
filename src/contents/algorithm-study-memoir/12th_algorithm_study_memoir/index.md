@@ -4,6 +4,8 @@ date: "2022-10-01T22:48:03.284Z"
 description: "12번째 알고리즘 스터디 회고록입니다."
 tag:
   - Algorithm
+preview: ../src/images/no-banner.jpg
+slug: 12th_algorithm_study_memoir
 ---
 
 시간이 빨리 가는 한 주 였습니다.

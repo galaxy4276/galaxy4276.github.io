@@ -4,6 +4,8 @@ date: "2022-10-05T10:12:03.284Z"
 description: "Pycon 을 통해 다채로운 파이썬 커뮤니티를 경험하다"
 tag:
   - conference
+preview: ./logo.jpg
+slug: pycon_2022
 ---
 
 # PYCON 2022 참여 계기

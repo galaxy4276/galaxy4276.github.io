@@ -4,6 +4,8 @@ date: "2022-09-14T21:20:03.284Z"
 description: "10주차 알고리즘 스터디의 회고록을 작성하였습니다."
 tag:
   - Algorithm
+preview: ../src/images/no-banner.jpg
+slug: 10th_algorithm_study_memoir
 ---
 
 벌써 10번 째 알고리즘 스터디 회고록을 작성하게 되었습니다.
