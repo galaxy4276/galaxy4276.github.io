@@ -5,7 +5,7 @@ description: "11번째 알고리즘 스터디 회고록입니다."
 tag:
   - Algorithm
 preview: ../src/images/no-banner.jpg
-slug: 11th_algorithm_study_memoir
+slug: 11th-algorithm-study-memoir
 ---
 
 11번 째 알고리즘 스터디 회고록입니다.

@@ -5,7 +5,7 @@ description: "14번째 알고리즘 스터디 회고록입니다."
 tag:
   - Algorithm
 preview: ../src/images/no-banner.jpg
-slug: 14th_algorithm_study_memoir
+slug: 14th-algorithm-study-memoir
 ---
 
 즐겁지만 추웠던 긴 휴가를 보내고나서 작성하는 알고리즘 스터디 회고록입니다.
