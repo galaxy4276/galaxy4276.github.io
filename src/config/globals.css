@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 @layer base {
-  h1, h2, h3, span, button, p {
+  h1, h2, h3, span, button, p, dd {
     @apply text-slate-700;
   }
 }
@@ -70,6 +70,16 @@ a {
   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 
+.gradient-sun {
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+}
+
+.gradient-deepblue {
+  background-color: #21D4FD;
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+}
+
 @font-face {
   font-family: 'Pretendard';
   font-style: normal;
@@ -96,7 +106,7 @@ a {
 }
 
 .tag_button {
-  @apply py-px px-1.5 bg-white text-sm md:text-base rounded-md drop-shadow-sm transition-colors duration-150;
+  @apply py-px px-1.5 bg-white text-sm md:text-base rounded-md drop-shadow-sm transition-colors duration-150 hover:bg-slate-200;
 }
 
 .tag_button--pressed {
