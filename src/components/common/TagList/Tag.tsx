@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { useTagStateContext } from './context';
+import { TagIcon } from './TagIcon';
 
 type Props = {
   tagName: string;
@@ -27,9 +28,10 @@ export const Tag: React.FC<Props> = ({ tagName, tagIndex  }) => {
   return (
     <button
       type="button"
-      className={`tag_button ${isPressed ? 'tag_button--pressed' : ''}`}
+      className={`tag_button ${isPressed ? 'tag_button--pressed' : ''} flex items-center gap-x-1`}
       onClick={onClickTag}
     >
+      <TagIcon tagName={tagName} />
       { tagName }
     </button>
   );
