@@ -47,8 +47,9 @@ export const PostStyleComp = styled.article`
     font-size: 12px;
     font-family: 'Jetbrains Mono',serif;
   }
-  
-  pre.language-text {
-    font-size: 1rem;
+
+  deckgo-highlight-code {
+    --deckgo-highlight-code-font-size: .79rem;
+    --deckgo-highlight-code-font-family: 'Jetbrains Mono', serif;
   }
 `;

@@ -1,2 +1,5 @@
 import './src/config/globals.css';
-import 'prismjs/themes/prism-tomorrow.css';
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+// import 'prismjs/themes/prism-tomorrow.css';
+
+deckDeckGoHighlightElement();

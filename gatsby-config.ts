@@ -57,59 +57,27 @@ const config: GatsbyConfig = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 580,
+              maxHeight: 550,
             },
           },
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: 'gatsby-remark-highlight-code',
             options: {
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false,
-              languageExtensions: [
-                {
-                  language: "superscript",
-                  extend: "javascript",
-                  definition: {
-                    superscript_types: /(SuperType)/,
-                  },
-                  insertBefore: {
-                    function: {
-                      superscript_keywords: /(superif|superelse)/,
-                    },
-                  },
-                },
-              ],
-              prompt: {
-                user: "root",
-                host: "localhost",
-                global: false,
-              },
-              escapeEntities: {},
+              terminal: 'carbon',
+              theme: 'dracula',
+              lineNumbers: true,
             },
           },
           {
             resolve: 'gatsby-remark-classes',
             options: {
-              classMap: {
-                'heading[depth=1]': 'text-2xl',
-                'heading[depth=2]': 'text-2xl',
-                'heading[depth=3]': 'text-2xl',
-              }
+              classMap: {}
             }
           }
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-        ]
-      }
-    }
   ],
 };
 

@@ -17,7 +17,7 @@ export const Head: HeadFC = () => <title>SILVER.GI.LOG | HOME</title>
 
 export const query = graphql`
   query IndexPage {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 9) {
       nodes {
         frontmatter {
           title

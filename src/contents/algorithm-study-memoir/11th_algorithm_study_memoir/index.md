@@ -16,7 +16,7 @@ slug: 11th-algorithm-study-memoir
 
 # 1032. 명령 프롬프트 ( boj )
 [명령 프롬프트](https://www.acmicpc.net/problem/1032)
-```Java
+```java
 public class Main {
 
   public static void main(String[] args) throws IOException {
@@ -43,7 +43,7 @@ public class Main {
 
 # 2161. 카드1 
 [카드1](https://www.acmicpc.net/problem/2161)
-```Java
+```java
 
 public class Main {
   public static void main(String[] args) throws IOException {

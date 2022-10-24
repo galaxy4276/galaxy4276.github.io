@@ -15,7 +15,7 @@ slug: 12th-algorithm-study-memoir
 작성 시점부터 출영 후 복귀하여 딩굴대다가 일어나서 친구랑 치킨 한마리하면서 작성 중입니다.
 
 # 다항식 구하기
-```Java
+```java
 class Polynomial {
   int num;
   int index;
@@ -67,14 +67,14 @@ public class Main {
 여러 다항식을 입력받고, 모든 항을 계산하고 남은 항의 결과 값을 계수과 지수로 출력하는 문제입니다.
 
 Map 형식에 지수, 계수 값을 기록하고 중복되는 값끼리 +, - 연산을 수행합니다.
-```Java
+```java
     var map = new HashMap<Integer, Integer>();
     ...
     int indexNum = map.getOrDefault(index, 0);
 ```
 
 이 후에 다항식을 클래스로 구현해두고 다항식 정보를 저장합니다.
-```Java
+```java
 class Polynomial {
   int num;
   int index;
@@ -87,7 +87,7 @@ class Polynomial {
 ```
 
 이후 배열 형태로 저장한 다항식 클래스들 Stream API 를 지수 순으로 정렬합니다.
-```Java
+```java
     List<Polynomial> result = storage.stream()
             .filter(polynomial -> polynomial.index != 0)
             .sorted((o1, o2) -> Integer.compare(o2.index, o1.index))
