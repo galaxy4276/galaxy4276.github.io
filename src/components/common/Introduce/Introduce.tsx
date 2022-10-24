@@ -19,7 +19,7 @@ export const Introduce: React.FC = () => {
           열정을 유지하고 배움을 갈망하는 개발자입니다.
         </dd>
         <dd className="text-sm">
-          IT 개발 서비스 협업에 관심이 많습니다.
+          개인 블로그에 배우고 기록하려고 노력하고 있습니다.
         </dd>
       </dl>
     </section>

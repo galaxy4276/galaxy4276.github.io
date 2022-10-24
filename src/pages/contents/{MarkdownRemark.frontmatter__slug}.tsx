@@ -3,6 +3,7 @@ import { graphql, PageProps } from 'gatsby';
 
 import { DefaultTemplate } from '../../templates/DefaultTemplate';
 import { PostStyleComp } from '../../components/common/Post';
+import { Introduce } from '../../components/common/Introduce';
 
 const MarkdownRemarkFrontmatter__slug = ({ data, children }: PageProps<Queries.PostDetailQuery>) => {
   const html = data.markdownRemark?.html as string;
@@ -33,6 +34,9 @@ const MarkdownRemarkFrontmatter__slug = ({ data, children }: PageProps<Queries.P
         <div dangerouslySetInnerHTML={{ __html: html }} />
         { children }
       </PostStyleComp>
+      <hr className="py-3" />
+      <Introduce />
+      <hr />
       <div ref={commentEl}></div>
     </DefaultTemplate>
   )

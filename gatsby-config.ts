@@ -53,14 +53,13 @@ const config: GatsbyConfig = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          'gatsby-remark-static-images',
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 580,
-              maxHeight: 550,
+              maxWidth: 420,
             },
           },
+          'gatsby-remark-static-images',
           {
             resolve: 'gatsby-remark-highlight-code',
             options: {
