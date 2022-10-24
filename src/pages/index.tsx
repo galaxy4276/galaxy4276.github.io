@@ -6,7 +6,6 @@ import { Home } from '../templates/Home';
 
 const IndexPage = ({ data }: PageProps<any>) => {
   const mdList = data.allMarkdownRemark.nodes;
-  console.log(mdList);
   return (
     <Home mdList={mdList as Queries.MarkdownRemark[]} />
   );
@@ -26,13 +25,6 @@ export const query = graphql`
           tag
           date(formatString: "YYYY년 MM월 DD일")
           preview
-#          preview {
-#            childImagesSharp {
-#              fluid(maxWidth: 700, maxHeight: 500) {
-#                ...GatsbyImageSharpFluid
-#              }
-#            }
-#          }
           slug
         }
       }

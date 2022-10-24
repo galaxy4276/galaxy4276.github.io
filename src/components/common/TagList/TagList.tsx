@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { nanoid } from 'nanoid';
 
 import { Tag } from './Tag';
 import { useTagStateContext } from './context';
 
-export const TagList: React.FC = () => {
+export const TagList: React.FC = memo(() => {
   const { tagList } = useTagStateContext();
   return (
     <nav
@@ -21,4 +21,4 @@ export const TagList: React.FC = () => {
       }
     </nav>
   );
-};
+});

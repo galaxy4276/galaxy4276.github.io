@@ -10,16 +10,18 @@ export const Tag: React.FC<Props> = ({ tagName, tagIndex  }) => {
   const [isPressed, setIsPressed] = useState(false);
   const { setTagState } = useTagStateContext();
 
-  console.log(`${tagIndex} isPressed: ${isPressed}`);
-
   const onClickTag = () => {
     setIsPressed(bool => !bool);
-    // setTagState(list => {
-    //   if (isPressed) return [...list, tagIndex];
-    //   const removeIndex = list.indexOf(tagIndex);
-    //   console.log({ removeIndex });
-    //   return list.filter(idx => idx != removeIndex);
-    // });
+    setTagState(list => {
+      if (!isPressed) {
+        const clone = [...list];
+        clone[tagIndex] = true;
+        return clone;
+      }
+      const clone = [...list];
+      clone[tagIndex] = false;
+      return clone;
+    });
   };
 
   return (

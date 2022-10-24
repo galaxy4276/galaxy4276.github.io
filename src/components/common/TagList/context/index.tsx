@@ -2,7 +2,7 @@ import { createContext, SetStateAction, Dispatch, useContext } from 'react';
 
 interface ContextProps {
   tagList: string[];
-  setTagState: Dispatch<SetStateAction<number[]>>;
+  setTagState: Dispatch<SetStateAction<boolean[]>>;
 }
 
 const TagStateContext = createContext<ContextProps | null>(null);

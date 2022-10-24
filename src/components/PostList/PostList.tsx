@@ -13,8 +13,9 @@ type Props = {
 };
 
 export const PostList: React.FC<Props> = ({ mdList }) => {
-  const [filterTagList, setFilterTagList] = useState<number[]>([]);
-  console.log({ filterTagList });
+  const [filterTagList, setFilterTagList] = useState<boolean[]>(() => {
+    return new Array(createTagSetStore(mdList).length).fill(false);
+  });
 
   const tagStore = useMemo(() => createTagSetStore(mdList), []);
   const ctxProps = useMemo(() => ({
@@ -22,11 +23,22 @@ export const PostList: React.FC<Props> = ({ mdList }) => {
     setTagState: setFilterTagList,
   }), []);
 
-  // TODO: Filter 로직 필요
   const posts = useMemo(() => {
-    return mdList.map(({ frontmatter: { ...props }}) => ({ ...props }));
+    const filterStringList = filterTagList
+      .map((isFilter, index) => {
+        if (isFilter) return tagStore[index];
+      })
+      .filter(d => d !== undefined);
+
+    const posts = mdList.map(({ frontmatter: { ...props }}) => ({ ...props }));
+
+    if (filterStringList.length == 0)
+      return posts;
+    return posts
+      .filter(({ tag: tagList }) => {
+        return tagList?.some(tag => filterStringList.includes(tag as string));
+      });
   }, [filterTagList]);
-  console.log(posts);
 
   return (
     <section className="flex flex-col gap-y-5">

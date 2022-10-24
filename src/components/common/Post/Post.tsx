@@ -22,7 +22,7 @@ export const Post: React.FC<Props> = ({ post }) => {
 
   return (
     <article
-      className="w-full cursor-pointer rounded-lg transition hover:bg-slate-300
+      className="w-full cursor-pointer rounded-lg transition hover:bg-slate-100
         p-2 duration-300
       "
       onClick={onClickToRedirectArticle}

@@ -92,15 +92,15 @@ a {
 }
 
 .tag_layout {
-  @apply w-full h-fit flex gap-x-1.5 px-2 py-1.5 bg-slate-200 rounded-md;
+  @apply w-full h-fit flex gap-x-1.5 px-2 py-1.5 bg-slate-100 rounded-md;
 }
 
 .tag_button {
-  @apply py-px px-1.5 bg-white text-sm md:text-base rounded-md drop-shadow-sm;
+  @apply py-px px-1.5 bg-white text-sm md:text-base rounded-md drop-shadow-sm transition-colors duration-150;
 }
 
 .tag_button--pressed {
-  @apply bg-sky-500 text-white;
+  @apply gradient-bluesea text-white;
 }
 
 .post_layout {
