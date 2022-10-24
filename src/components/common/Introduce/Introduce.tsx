@@ -15,10 +15,10 @@ export const Introduce: React.FC = () => {
         <dt className="px-2 py-py font-semibold rounded-md gradient-deepblue text-white w-fit mb-2">
           galaxy4276
         </dt>
-        <dd>
+        <dd className="text-sm">
           열정을 유지하고 배움을 갈망하는 개발자입니다.
         </dd>
-        <dd>
+        <dd className="text-sm">
           IT 개발 서비스 협업에 관심이 많습니다.
         </dd>
       </dl>
