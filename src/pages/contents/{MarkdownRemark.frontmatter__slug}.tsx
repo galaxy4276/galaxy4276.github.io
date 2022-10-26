@@ -34,7 +34,7 @@ const MarkdownRemarkFrontmatter__slug = ({ data, children }: PageProps<Queries.P
         <div dangerouslySetInnerHTML={{ __html: html }} />
         { children }
       </PostStyleComp>
-      <hr className="py-3" />
+      <hr className="py-3 mt-6" />
       <Introduce />
       <hr />
       <div ref={commentEl}></div>
@@ -48,6 +48,7 @@ export const query = graphql`
   query PostDetail($id: String) {
     markdownRemark(id: { eq: $id }) {
       html
+      htmlAst
       frontmatter {
         title
         date(formatString: "YYYY년 MM월 DD일") 

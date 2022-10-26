@@ -143,7 +143,7 @@ api.getUserCommittedTable('galaxy4276');
 해결한 문제에 대한 정보와 커밋 리스트는 사용하는 데이터 컴포넌트가 다르므로 분리하였다.
 
 이제 여기서 한 발자국 더 나아가서 해당 api 데이터를 관리하는 React Custom Hook 을 작성하였다.
-```typescript
+```tsx
 
 const CommittedListContext = createContext<HookProps>({
   factory: new CommittedListMapper([]),
@@ -199,7 +199,7 @@ export default useCommittedList;
 ```
 
 이제 React.js 코드에서 다음과 같이 사용하면 되는 것이다.
-```typescript
+```tsx
 // 최상위 컴포넌트
 const RootConfiguration: React.FC<PropsWithChildren> = ({ children }) => {
   const { Provider: CommittedListProvider, ...state } = useCommittedList();
@@ -211,7 +211,7 @@ const RootConfiguration: React.FC<PropsWithChildren> = ({ children }) => {
   );
 };
 ```
-```typescript
+```tsx
 // 사용자 프로필 리스트를 렌더링하는 컴포넌트
 export const ProfileList: React.FC = () => {
   const { factory, isLoading } = useCommittedListContext();
@@ -236,7 +236,7 @@ Github Commit API 스키마가 간단한 편은아닌데 어떤 데이터는 여
 개발자는 피곤하고 가독성도 떨어지기 마련이다.
 
 처음에 그런식으로 코딩되었던 부분을 추 후 Context API를 사용하여 해결했다.
-```typescript
+```tsx
 // Before..
 return (
   <ProfileLayout>
@@ -253,7 +253,7 @@ return (
   </ProfileLayout>
 );
 ```
-```typescript
+```tsx
 // after
 return (
   <ProfileLayout id="profile-capture">
@@ -273,7 +273,7 @@ return (
 );
 ```
 이렇게 Context API의 Provider 를 적용해놓으면 하위 컴포넌트 어디서든 value 데이터를 꺼내 쓸 수 있다.
-```typescript
+```tsx
 export const Profile: React.FC = () => {
 	const commitList = useUserCommitList(); // <- 편하게 꺼내쓰면 됩니다.
 	const { author } = commitList[0];
