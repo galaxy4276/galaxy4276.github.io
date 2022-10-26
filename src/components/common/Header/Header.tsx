@@ -20,8 +20,16 @@ export const Header: React.FC = () => {
           SILVER.GI.LOG
         </Link>
         <ul className="header_nav">
-          <li>About</li>
-          <li>Posts</li>
+          <li>
+            <Link to="/about">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/posts">
+              Posts
+            </Link>
+          </li>
           <li>Tags</li>
           <li>Projects</li>
         </ul>

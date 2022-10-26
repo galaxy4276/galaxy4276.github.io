@@ -1,8 +1,11 @@
 import React from 'react';
 
 export const Introduce: React.FC = () => {
+  const onClickName = () =>
+    window.alert('오늘도 좋은 하루 되세요.');
+
   return (
-    <section className="flex pb-10 gap-x-5">
+    <section className="flex py-3 gap-x-5">
       <section className="w-24 h-24 md:w-32 md:h-32 drop-shadow-lg">
         <img
           src="https://avatars.githubusercontent.com/u/50310464?v=4"
@@ -12,7 +15,10 @@ export const Introduce: React.FC = () => {
       </section>
 
       <dl className="flex flex-col">
-        <dt className="px-2 py-py font-semibold rounded-md gradient-deepblue text-white w-fit mb-2">
+        <dt
+          className="px-2 py-py font-semibold rounded-md gradient-deepblue text-white w-fit mb-2"
+          onClick={onClickName}
+        >
           galaxy4276
         </dt>
         <dd className="text-sm">
