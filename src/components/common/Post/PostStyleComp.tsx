@@ -52,4 +52,8 @@ export const PostStyleComp = styled.article`
     --deckgo-highlight-code-font-size: .79rem;
     --deckgo-highlight-code-font-family: 'Jetbrains Mono', serif;
   }
+  
+  img {
+    border-radius: 6px;
+  }
 `;

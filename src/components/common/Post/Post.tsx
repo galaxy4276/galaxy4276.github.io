@@ -41,15 +41,17 @@ export const Post: React.FC<Props> = ({ post }) => {
         <span className="text-slate-600 text-sm">
           {post.description}
         </span>
-        {
-          post.tag
-            ?.map(tagName =>
-              <PostTag
-                key={nanoid()}
-                tagName={tagName as string}
-              />
-            )
-        }
+        <section className="flex gap-x-1">
+          {
+            post.tag
+              ?.map(tagName =>
+                <PostTag
+                  key={nanoid()}
+                  tagName={tagName as string}
+                />
+              )
+          }
+        </section>
       </section>
     </article>
   );

@@ -1,19 +1,19 @@
 import React from 'react';
-import type { HeadFC } from 'gatsby';
 import { graphql, PageProps } from 'gatsby';
+import { DefaultTemplate } from '../templates/DefaultTemplate';
+import { PostList } from '../components/PostList';
 
-import { Home } from '../templates/Home';
-
-const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
+const PostPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
   const mdList = data.allMarkdownRemark.nodes;
+
   return (
-    <Home mdList={mdList as Queries.MarkdownRemark[]} />
-  );
+    <DefaultTemplate>
+      <PostList mdList={mdList as Queries.MarkdownRemark[]} />
+    </DefaultTemplate>
+  )
 };
 
-export default IndexPage;
-
-export const Head: HeadFC = () => <title>SILVER.GI.LOG | HOME</title>
+export default PostPage;
 
 export const query = graphql`
   query IndexPage {
