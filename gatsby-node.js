@@ -27,6 +27,5 @@ exports.onCreateNode = async (
     }
   ) => {
   if (node.internal.type === 'MarkdownRemark' || 'AllMarkdownRemark') {
-    console.log('test');
   }
 };
