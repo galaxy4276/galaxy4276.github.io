@@ -41,7 +41,7 @@ export const Post: React.FC<Props> = ({ post }) => {
         <span className="text-slate-600 text-sm">
           {post.description}
         </span>
-        <section className="flex gap-x-1">
+        <section className="flex gap-x-1 flex-wrap">
           {
             post.tag
               ?.map(tagName =>
