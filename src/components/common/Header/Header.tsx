@@ -30,7 +30,6 @@ export const Header: React.FC = () => {
               Posts
             </Link>
           </li>
-          <li>Tags</li>
           <li>Projects</li>
         </ul>
       </section>
