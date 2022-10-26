@@ -102,7 +102,7 @@ a {
 /*}*/
 
 .tag_layout {
-  @apply w-full h-fit flex gap-x-1.5 px-2 py-1.5 bg-slate-100 rounded-md;
+  @apply w-full h-fit flex gap-x-1.5 px-2 py-1.5 bg-slate-100 rounded-md flex-wrap gap-y-1.5;
 }
 
 .tag_button {
