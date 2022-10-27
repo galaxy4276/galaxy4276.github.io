@@ -99,7 +99,7 @@ slug: 10th-algorithm-study-memoir
 ***
 # 2828. 사과 담기 게임 ( BOJ )
 [사과담기 게임](https://www.acmicpc.net/problem/2828)
-```Java
+```java
 public class Main {
 
   public static void main(String[] args) throws IOException {
@@ -137,7 +137,7 @@ public class Main {
 }
 ```
 바구니는 처음에 왼쪽 맨 끝에 위치하기 때문에 다음과 같이 사이즈를 규정하였습니다.
-```Java
+```java
     ...
     int left = 1;
     int right = bagSize; // 바구니 크기 
@@ -150,7 +150,7 @@ for 문 안에서 사과가 떨어지는 3가지 분기를 작성하였습니다
 3. 사과가 바구니의 오른쪽에 가깝게 떨어졌을 때
 
 사과가 만약 왼쪽바구니쪽으로 떨어졌다면...
-```Java
+```java
     sum += left - where; // 왼쪽으로 이동한 횟수만큼 +연산
     right -= left - where; // 왼쪽으로 이동한 횟수만큼 -연산. 해주지 않으면 바구니는 왼쪽으로 늘어나기만하는 기이한 형태가 된다.
     left = where; // 떨어진곳에 바구니의 왼쪽이 도달하도록 설정
@@ -159,7 +159,7 @@ for 문 안에서 사과가 떨어지는 3가지 분기를 작성하였습니다
 
 # 1926. 그림 ( BOJ )
 [그림](https://www.acmicpc.net/problem/1926)
-```Java
+```java
 class Pair {
   public int x, y;
   public Pair(int x, int y) {
@@ -245,7 +245,7 @@ public class Main {
 그림은 총 4장, 가장 큰 그림의 너비는 9입니다.
 
 문제를 해결하기 위해 선언한 변수는 다음과 같습니다.
-```Java
+```java
     boolean[][] visited = new boolean[h][w]; // 방문 여부 체크
     int paintCount = 0; // 총 그림 갯수
     int area = 0; // 탐색 중인 그림의 너비
@@ -256,7 +256,7 @@ public class Main {
 visited 는 캔버스에서 너비 우선 탐색을 수행하면서 방문한 칸의 여부를 확인하기 위해 존재합니다.
 
 area 는 탐색 중인 그림의 너비를 확인하는데, 매번 한 그림의 너비탐색을 끝나면 max와 비교하여 max 값을 갱신합니다.
-```Java
+```java
  if (area > max) max = area;
 ```
 dx, dy 가 처음에는 잘 이해안될 수도 있는데 단순히 상하좌우 좌표값을 의미하며, 상대적인 좌표값 기준에서 상하좌우 값
@@ -265,7 +265,7 @@ dx, dy 가 처음에는 잘 이해안될 수도 있는데 단순히 상하좌우
 ![dx_dy](./dxdy.png)
 
 다음은 탐색 알고리즘입니다.
-```Java
+```java
     for (int i = 0; i < h; i++) {
       for (int j = 0; j < w; j++) {
         if (canvas[i][j] == 0 || visited[i][j]) continue;
