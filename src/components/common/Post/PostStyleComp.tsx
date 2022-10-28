@@ -1,6 +1,10 @@
 import styled from '@emotion/styled';
 
 export const PostStyleComp = styled.article`
+  * {
+    font-family: 'Pretendard', 'JetBrains Mono', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+  
   h1 {
     font-size: 1.5rem;
     font-weight: bold;

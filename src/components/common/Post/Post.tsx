@@ -1,7 +1,7 @@
 import React from 'react';
 import { navigate } from 'gatsby';
 import { nanoid } from 'nanoid';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import Image from 'gatsby-image';
 
 import { PostTag } from './PostTag';
 
@@ -11,7 +11,7 @@ type Props = {
     description: string | null;
     tag: readonly (string | null)[] | null;
     date: string | null;
-    preview: string | null;
+    preview: Queries.Maybe<Queries.File>;
     slug: string | null;
   }
 };
@@ -20,6 +20,8 @@ export const Post: React.FC<Props> = ({ post }) => {
   const onClickToRedirectArticle = () =>
     navigate(`/contents/${post.slug}/`);
 
+  const previewImgFluid = post.preview?.childImageSharp?.fluid as any;
+
   return (
     <article
       className="w-full cursor-pointer rounded-lg transition hover:bg-slate-100
@@ -27,7 +29,11 @@ export const Post: React.FC<Props> = ({ post }) => {
       "
       onClick={onClickToRedirectArticle}
     >
-      <section>
+      <section className="pb-3">
+        <Image
+          fluid={previewImgFluid}
+          className="rounded-md drop-shadow-md"
+        />
       </section>
       <section
         className="flex flex-col items-start"
