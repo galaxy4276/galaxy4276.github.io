@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksilver_gi_log=self.webpackChunksilver_gi_log||[]).push([[754],{234:function(t,a,l){l.r(a);var n=l(3389),e=l(1300),r=l(3431);a.default=function(t){var a=t.data,l=a.allMarkdownRemark.nodes;return(0,r.tZ)(n.z,null,(0,r.tZ)(e.p,{mdList:l,totalCount:a.allMarkdownRemark.totalCount}))}}}]);
+//# sourceMappingURL=component---src-pages-posts-tsx-fc010e5d593908fbea47.js.map
