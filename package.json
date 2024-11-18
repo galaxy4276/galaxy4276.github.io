@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://galaxy4276.github.io",
+  "homepage": "https://galaxy4276.github.io/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,8 @@
     "dev": "vite --port 3333",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy":  "gh-pages -d dist"
   },
   "dependencies": {
     "@types/node": "^22.9.0",
@@ -32,6 +33,7 @@
     "eslint": "^9.13.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
+    "gh-pages": "^6.2.0",
     "globals": "^15.11.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.14",
