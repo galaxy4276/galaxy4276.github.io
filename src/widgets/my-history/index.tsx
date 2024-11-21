@@ -14,7 +14,7 @@ export const MyHistory = () => {
   const onClickDirectContact = () => window.open(url, "_blank");
 
   return (
-    <div className="flex flex-col default-gap  md:grid grid-cols-4">
+    <div className="flex flex-col default-gap md:pc-gap md:grid grid-cols-4">
       <article className="col-span-2 flex flex-col default-gap">
         <Card className="bg-no-repeat flex w-full justify-between cursor-pointer object-cover bg-cover h-[80px]" style={{ backgroundImage: "url(\"/image/pink.png\")" }} onClick={onClickDirectContact}>
           <Typo size={22} lang="en" className="text-white self-end" bold>DIRECT CONTACT</Typo>
@@ -82,7 +82,7 @@ export const MyHistory = () => {
             </div>
           </div>
         </Card>
-        <div className="w-full h-full flex default-gap">
+        <div className="w-full h-full flex default-gap md:pc-gap">
           <Card.Hover
             className="h-[180px] flex-[0.5] bg-no-repeat object-cover bg-cover overflow-hidden"
             style={{ backgroundImage: "url(\"/image/blue-bg.png\")" }}

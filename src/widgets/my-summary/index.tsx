@@ -11,8 +11,8 @@ export const MySummary = () => {
   };
 
   return (
-    <div className="flex flex-col default-gap md:grid grid-cols-info">
-      <Card className="p-[16px] flex flex-col gap-y-[8px]">
+    <div className="flex flex-col default-gap md:pc-gap md:grid grid-cols-info">
+      <Card className="p-[16px] flex flex-col gap-y-[8px] md:pc-gap ">
         <header className="flex gap-x-[23px]">
           <img
             src="/image/me.jpeg"
@@ -41,14 +41,14 @@ export const MySummary = () => {
         >
         </Map>
       </Card>
-      <div className="flex flex-col gap-y-[8px]">
+      <div className="flex flex-col gap-y-[8px] md:pc-gap">
         <Card className="flex-1 flex items-center justify-between">
           <Typo size={20} lang="en" bold>RESUME</Typo>
           <button onClick={onClickDownloadResume}>
             <img src="/image/download.png" alt="download" />
           </button>
         </Card>
-        <div className="default-gap grid grid-cols-3 flex-1">
+        <div className="default-gap md:pc-gap grid grid-cols-3 flex-1">
           <LinkButton variant="github" link="https://github.com/galaxy4276" />
           <LinkButton variant="linkedin" link="https://www.linkedin.com/in/eun-gi-choi-12a3a6313/" />
           <LinkButton variant="obsidian" link="https://publish.obsidian.md/deveungi/publish/%EA%B0%99%EC%9D%B4+%EC%9D%BC%ED%95%98%EA%B8%B0+%EC%A2%8B%EC%9D%80+%EC%82%AC%EB%9E%8C%EC%9D%B4+%EB%90%98%EA%B8%B0+%EC%9C%84%ED%95%9C+%EA%B3%B5%EA%B0%84" />

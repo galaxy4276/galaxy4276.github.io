@@ -87,6 +87,10 @@ html, body {
     @apply gap-x-[8px] gap-y-[8px];
 }
 
+.pc-gap {
+    @apply gap-x-[16px] gap-y-[16px];
+}
+
 .shadow {
     box-shadow: 5px 10px 25px -4px rgba(23,23,23,0.17);
     -webkit-box-shadow: 5px 10px 25px -4px rgba(23,23,23,0.17);
@@ -180,4 +184,20 @@ html, body {
 /* 페이드인 효과 클래스 */
 .fade-in {
     animation: fadeIn .3s ease-in-out;
+}
+
+@keyframes wipe {
+    0% {
+        transform: translateX(-20px);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+.wipe {
+    animation: wipe 4s ease-in-out infinite;
 }

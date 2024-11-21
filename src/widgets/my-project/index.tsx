@@ -6,11 +6,11 @@ export const MyProject = () => {
 
   const [leftSide, rightSide] = splitTwoSide(projectData);
   return (
-    <div className="flex w-full flex-col md:grid grid-cols-2 default-gap">
-      <div className="flex flex-col default-gap">
+    <div className="flex w-full flex-col md:grid grid-cols-2 default-gap md:pc-gap">
+      <div className="flex flex-col default-gap md:pc-gap">
         {rightSide.map(project => <Card.Project project={project} key={project.title}/>)}
       </div>
-      <div className="flex flex-col default-gap">
+      <div className="flex flex-col default-gap md:pc-gap">
         {leftSide.map(project => <Card.Project project={project} key={project.title}/>)}
       </div>
 

@@ -2,7 +2,7 @@ import { Certificate } from "@/shared/ui/certificate";
 
 export const MyCertificate = () => {
   return (
-    <div className="flex default-gap flex-wrap">
+    <div className="flex default-gap md:pc-gap flex-wrap">
       <Certificate
         name="Engineer Information Processing"
         issuer="한국산업인력공단 국가자격 (산업기사)"
