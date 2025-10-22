@@ -21,8 +21,8 @@ export const MyHistory = () => {
             <Typo size={24} lang="en" className="text-white" bold>DIRECT CONTACT</Typo>
             <Typo size={14} className="text-white/80">{myEmail}</Typo>
           </div>
-          <div className="bg-white/20 p-3 rounded-full">
-            <EmailIcon className="w-8 h-8 text-white" />
+          <div className="bg-white/20 p-3 rounded-full w-8 h-8 flex items-center justify-center">
+            <EmailIcon />
           </div>
         </Card>
 
