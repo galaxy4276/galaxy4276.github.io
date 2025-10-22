@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 
 export type Study = {
   bgColor: string;
+  name: string;
   title: string;
   content: ReactElement;
   Present: ReactElement;

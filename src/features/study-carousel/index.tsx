@@ -1,14 +1,30 @@
-import Flicking from "@egjs/react-flicking";
 import { studyList } from "@/entities/study";
 import { StudyItem } from "./ui/StudyItem";
-import { AutoPlay } from "@egjs/flicking-plugins";
+import { memo } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+// @ts-ignore
+import 'swiper/css';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-export const StudyCarousel = () => {
-  const plugins = [new AutoPlay({ duration: 5000, direction: "NEXT", stopOnHover: true })];
-
+const StudyCarouselComp = () => {
   return (
-    <Flicking plugins={plugins} circular autoResize bound autoInit changeOnHold  useFindDOMNode adaptive>
-      {studyList.map((study) => <StudyItem {...study} key={study.title} />)}
-    </Flicking>
+    <Swiper
+      slidesPerView={1}
+      autoHeight
+      rewind
+      autoplay={{
+        delay: 5000,
+        pauseOnMouseEnter: true,
+      }}
+      modules={[Navigation, Pagination, Autoplay]}
+    >
+      {studyList.map((study) =>
+        <SwiperSlide key={study.title}>
+          <StudyItem {...study} />
+        </SwiperSlide>
+      )}
+    </Swiper>
   );
 };
+
+export const StudyCarousel = memo(StudyCarouselComp);

@@ -189,15 +189,26 @@ html, body {
 @keyframes wipe {
     0% {
         transform: translateX(-20px);
+        rotate: 5deg;
     }
     50% {
         transform: translateX(20px);
+        rotate: 8deg;
     }
     100% {
         transform: translateX(-20px);
+        rotate: 5deg;
     }
 }
 
 .wipe {
-    animation: wipe 4s ease-in-out infinite;
+    animation: wipe 3s ease-in-out infinite;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
 }

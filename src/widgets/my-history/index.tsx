@@ -16,25 +16,37 @@ export const MyHistory = () => {
   return (
     <div className="flex flex-col default-gap md:pc-gap md:grid grid-cols-4">
       <article className="col-span-2 flex flex-col default-gap">
-        <Card className="bg-no-repeat flex w-full justify-between cursor-pointer object-cover bg-cover h-[80px]" style={{ backgroundImage: "url(\"/image/pink.png\")" }} onClick={onClickDirectContact}>
-          <Typo size={22} lang="en" className="text-white self-end" bold>DIRECT CONTACT</Typo>
-          <EmailIcon />
+        <Card className="bg-gradient-to-r from-pink-500 to-purple-600 flex w-full justify-between items-center cursor-pointer h-[100px] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]" onClick={onClickDirectContact}>
+          <div className="flex flex-col">
+            <Typo size={24} lang="en" className="text-white" bold>DIRECT CONTACT</Typo>
+            <Typo size={14} className="text-white/80">{myEmail}</Typo>
+          </div>
+          <div className="bg-white/20 p-3 rounded-full">
+            <EmailIcon className="w-8 h-8 text-white" />
+          </div>
         </Card>
 
-        <Card className="min-h-[180px] flex flex-col md:min-h-[240px]">
-          <div className="relative pt-2">
-            <div id="blur-left" className="w-[15px] h-[64px] bg-white absolute blur-lg left-0 top-0"/>
-            <Marquee className="[--duration:20s]" pauseOnHover>
-              {techs.map((tech) => <TechBox type={tech} key={tech}/>)}
+        <Card className="min-h-[200px] flex flex-col md:min-h-[260px] bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="flex flex-col pt-4 pb-3">
+            <Typo size={20} className="text-slate-800 mb-1" bold>🚀 관심 기술 스택</Typo>
+            <Typo size={13} className="text-slate-500">끊임없이 학습하고 적용하고 있는 기술들</Typo>
+          </div>
+          
+          <div className="relative flex-1">
+            <div id="blur-left" className="w-[20px] h-full bg-gradient-to-r from-white via-white/80 to-transparent absolute left-0 top-0 z-10"/>
+            <div id="blur-right" className="w-[20px] h-full bg-gradient-to-l from-white via-white/80 to-transparent absolute right-0 top-0 z-10"/>
+            
+            <Marquee className="[--duration:25s] mb-2" pauseOnHover>
+              {techs.slice(0, 6).map((tech) => <TechBox type={tech} key={tech}/>)}
             </Marquee>
-            <Marquee className="[--duration:20s]" reverse pauseOnHover>
-              {techs.map((tech) => <TechBox type={tech} key={tech}/>)}
+            <Marquee className="[--duration:30s]" reverse pauseOnHover>
+              {techs.slice(6).map((tech) => <TechBox type={tech} key={tech}/>)}
             </Marquee>
           </div>
 
-          <div className="flex flex-col pt-2 justify-end">
-            <Typo size={13} className="text-slate-400">다음 기술들에</Typo>
-            <Typo size={18} className="text-slate-800" bold>관심이 많아요 🥰</Typo>
+          <div className="flex justify-between items-end pt-2">
+            <Typo size={12} className="text-slate-400">현재 {techs.length}개 기술 학습 중</Typo>
+            <Typo size={14} className="text-blue-600" bold>계속 성장하는 중 💪</Typo>
           </div>
         </Card>
 
@@ -55,8 +67,8 @@ export const MyHistory = () => {
       <article className="col-span-2 flex flex-col default-gap h-fit">
         <Card className="col-span-2 h-fit">
           <div className="flex flex-col">
-            <Typo size={12} className="text-slate-400">최소 1년 이상</Typo>
-            <Typo size={20} color="title" bold>이력 사항</Typo>
+            <Typo size={12} className="text-slate-400">2년 이상의 경력</Typo>
+            <Typo size={20} color="title" bold>경력 사항</Typo>
 
             <div className="flex flex-col gap-y-3 py-2">
               {workHistories.map(({ title, companyName, date, expire }) => (

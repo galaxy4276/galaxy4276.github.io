@@ -3,7 +3,7 @@ import { Study } from "@/entities/study";
 import { Typo } from "@/shared/ui";
 import { join } from "@/shared/utils";
 
-export const StudyItem: FC<Study> = ({ title, content, bgColor, Present, textWhite = true }) => {
+export const StudyItem: FC<Study> = ({ title, name, content, bgColor, Present, textWhite = true }) => {
   return (
     <div
       style={{ backgroundColor: bgColor }}
@@ -16,7 +16,8 @@ export const StudyItem: FC<Study> = ({ title, content, bgColor, Present, textWhi
           <Typo size={24} className={join(["text-white underline underline-offset-8", !textWhite && "text-slate-900"])} bold>
             {title}
           </Typo>
-          <Typo size={14} className={join(["text-white pt-3", !textWhite && "text-slate-900"])}>
+          <Typo size={14} className="text-white" bold>{name}</Typo>
+          <Typo size={14} className={join(["text-white pt-3", !textWhite && "text-slate-900"])} bold>
             {content}
           </Typo>
         </div>
