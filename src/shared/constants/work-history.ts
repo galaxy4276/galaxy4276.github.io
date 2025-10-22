@@ -15,7 +15,7 @@ export type WorkHistory = {
 export const workHistories: WorkHistory[] = [
   {
     title: {
-      name: "FE Developer",
+      name: "CTO(최은기)",
       description: "React Web Dev & Infra Operation.",
     },
     companyName: "스마트뉴비",
